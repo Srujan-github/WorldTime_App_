@@ -17,7 +17,16 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.redAccent,
         elevation: 0,
       ),
-      body:  SafeArea(child: Text('Home Screen')),
+      body:  SafeArea(child:Column(
+        children: [
+         TextButton.icon(
+             onPressed: (){
+               Navigator.pushNamed(context, '/location');
+             },
+             icon: Icon(Icons.edit_location),
+             label:  Text('Edit Location'))
+        ],
+      )),
     );
   }
 }
